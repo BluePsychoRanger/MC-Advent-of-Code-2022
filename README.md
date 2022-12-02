@@ -4,11 +4,11 @@ All computations are done using datapacks. Inputs are generated with the `get_in
 
 ```
 Hello
-123
+123 45
 
 (0,-2)
 ```
 ->
-```
-[["H","e","l","l","o"],["1","2","3"],[],["(","0",",","-","2")]]
+```json
+[["H","e","l","l","o"],["1","2","3"," ","4","5"],[],["(","0",",","-","2",")"]]
 ```
