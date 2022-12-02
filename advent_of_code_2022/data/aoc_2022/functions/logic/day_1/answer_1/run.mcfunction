@@ -1,7 +1,11 @@
-scoreboard players set count bpr_aoc 0
-scoreboard players set max bpr_aoc 0
+data modify storage bpr:aoc/library list set from storage bpr:aoc Input
+function aoc_library:list/string/to_int
+data modify storage bpr:aoc Input set from storage bpr:aoc/library list
+
+scoreboard players set count_1 bpr_aoc 0
+scoreboard players set max_1 bpr_aoc 0
 scoreboard players set answer_1 bpr_aoc_answers -1
-execute store result score i bpr_aoc run data get storage bpr:aoc Input1
+execute store result score i_1 bpr_aoc run data get storage bpr:aoc Input
 
 function aoc_2022:logic/day_1/answer_1/loop
 

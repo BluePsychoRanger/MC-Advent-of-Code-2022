@@ -1,9 +1,13 @@
+data modify storage bpr:aoc/library list set from storage bpr:aoc Input
+function aoc_library:list/string/to_int
+data modify storage bpr:aoc Input set from storage bpr:aoc/library list
+
 scoreboard players set count_2 bpr_aoc 0
 scoreboard players set max_2_1 bpr_aoc 0
 scoreboard players set max_2_2 bpr_aoc 0
 scoreboard players set max_2_3 bpr_aoc 0
 scoreboard players set answer_2 bpr_aoc_answers -1
-execute store result score i_2 bpr_aoc run data get storage bpr:aoc Input2
+execute store result score i_2 bpr_aoc run data get storage bpr:aoc Input
 
 function aoc_2022:logic/day_1/answer_2/loop
 

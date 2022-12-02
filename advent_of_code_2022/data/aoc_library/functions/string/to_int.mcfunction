@@ -1,9 +1,17 @@
-execute unless data storage bpr:aoc/library char run tellraw @a [{"text":"[ERROR] ","color":"dark_red"},{"text":"No [char] set","color":"red"},{"text":" ...aoc_library:functions/string/to_int (line 1)","color":"aqua"}]
+function aoc_library:init_const
+execute unless data storage bpr:aoc/library string run tellraw @a [{"text":"[ERROR] ","color":"dark_red"},{"text":"No [string] set","color":"red"},{"text":" ...aoc_library:functions/string/to_int (line 2)","color":"aqua"}]
 
-scoreboard players set num bpr_aoc 10
-data merge storage bpr:aoc/library {numbers:['0','1','2','3','4','5','6','7','8','9']}
+data modify storage bpr:aoc/library temp_string set from storage bpr:aoc/library string
+execute store result score i_string_to_int bpr_aoc run data get storage bpr:aoc/library string
 
-function aoc_library:string/helper_functions/to_int_check
+scoreboard players reset num_from_string bpr_aoc
+execute if score i_string_to_int bpr_aoc matches 0 run scoreboard players set num_from_string bpr_aoc -1
 
-data remove storage bpr:aoc/library numbers
-data remove storage bpr:aoc/library char
+execute if score i_string_to_int bpr_aoc matches 1.. run function aoc_library:string/helper_functions/to_int_loop
+scoreboard players operation num bpr_aoc = num_from_string bpr_aoc
+
+data remove storage bpr:aoc/library temp_string
+scoreboard players reset num_from_string bpr_aoc
+scoreboard players reset i_string_to_int bpr_aoc
+scoreboard players reset not_eq bpr_aoc
+scoreboard players reset eq bpr_aoc
