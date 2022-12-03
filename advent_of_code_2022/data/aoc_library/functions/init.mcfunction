@@ -8,3 +8,4 @@ scoreboard players set 10 bpr_aoc_const 10
 scoreboard players set 100 bpr_aoc_const 100
 scoreboard players set -1 bpr_aoc_const -1
 scoreboard players set 2 bpr_aoc_const 2
+scoreboard players set 1000 bpr_aoc_const 1000

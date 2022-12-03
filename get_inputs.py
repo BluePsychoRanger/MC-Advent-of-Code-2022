@@ -26,11 +26,11 @@ def parse_input(input):
 def write_functions(cmd, day):
     os.makedirs(os.path.dirname(f"{DIR}/day_{day}/part_1.mcfunction"), exist_ok=True)
     with open(f"{DIR}/day_{day}/part_1.mcfunction", "w") as file:
-        file.write(f"scoreboard players reset * bpr_aoc\nscoreboard players reset * bpr_aoc_answers\nscoreboard players set day bpr_aoc_answers {day}\nscoreboard players set part bpr_aoc_answers 1\n\n{cmd}\nexecute store result score input_length bpr_aoc run data get storage bpr:aoc Input\n\nfunction aoc_2022:logic/day_{day}/part_1/run\n")
+        file.write(f"scoreboard players reset * bpr_aoc\nscoreboard players reset * bpr_aoc_answers\nscoreboard players set day bpr_aoc_answers {day}\nscoreboard players set part bpr_aoc_answers 1\n\n{cmd}\nexecute store result score input_length bpr_aoc run data get storage bpr:aoc Input\n\nfunction aoc_library:timer/start\nfunction aoc_2022:logic/day_{day}/part_1/run\n")
     
     os.makedirs(os.path.dirname(f"{DIR}/day_{day}/part_2.mcfunction"), exist_ok=True)
     with open(f"{DIR}/day_{day}/part_2.mcfunction", "w") as file:
-        file.write(f"scoreboard players reset * bpr_aoc\nscoreboard players reset * bpr_aoc_answers\nscoreboard players set day bpr_aoc_answers {day}\nscoreboard players set part bpr_aoc_answers 2\n\n{cmd}\nexecute store result score input_length bpr_aoc run data get storage bpr:aoc Input\n\nfunction aoc_2022:logic/day_{day}/part_2/run\n")
+        file.write(f"scoreboard players reset * bpr_aoc\nscoreboard players reset * bpr_aoc_answers\nscoreboard players set day bpr_aoc_answers {day}\nscoreboard players set part bpr_aoc_answers 2\n\n{cmd}\nexecute store result score input_length bpr_aoc run data get storage bpr:aoc Input\n\nfunction aoc_library:timer/start\nfunction aoc_2022:logic/day_{day}/part_2/run\n")
 
 def main():
     day = 1
