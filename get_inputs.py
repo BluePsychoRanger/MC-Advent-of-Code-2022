@@ -11,7 +11,7 @@ def get_puzzle_input(day):
     try:
         out = puzzle.input_data
     except:
-        print("Failed to get data for Day", day)
+        print(f"Downloaded data from Days 1-{day-1}")
     return out
 
 def parse_input(input):
