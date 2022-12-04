@@ -1,3 +1,4 @@
+# get next digits
 execute store result score digit1 bpr_aoc run data get storage bpr:aoc/library big_int1_temp[-1]
 execute store result score digit2 bpr_aoc run data get storage bpr:aoc/library big_int2_temp[-1]
 

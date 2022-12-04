@@ -1,3 +1,9 @@
+# get next string in io input
+# input:  none
+# output: storage | next_string
+#         score   | next_char_length
+
+
 execute store result score next_string bpr_aoc run data modify storage bpr:aoc next_string set from storage bpr:aoc Input[-1]
 execute store result score next_string_length bpr_aoc run data get storage bpr:aoc next_string
 

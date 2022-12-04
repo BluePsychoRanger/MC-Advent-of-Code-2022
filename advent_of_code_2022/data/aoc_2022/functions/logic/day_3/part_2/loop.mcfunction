@@ -3,16 +3,16 @@ function aoc_library:io/next_string
 data modify storage bpr:aoc/library string1 set from storage bpr:aoc next_string
 function aoc_library:io/next_string
 data modify storage bpr:aoc/library string2 set from storage bpr:aoc next_string
-function aoc_library:string/match
+function aoc_library:string/intersection
 
 # find matching chars for third line
-data modify storage bpr:aoc/library string1 set from storage bpr:aoc/library matches
+data modify storage bpr:aoc/library string1 set from storage bpr:aoc/library intersections
 function aoc_library:io/next_string
 data modify storage bpr:aoc/library string2 set from storage bpr:aoc next_string
-function aoc_library:string/match
+function aoc_library:string/intersection
 
 # convert char to ascii value
-data modify storage bpr:aoc/library char set from storage bpr:aoc/library matches[-1]
+data modify storage bpr:aoc/library char set from storage bpr:aoc/library intersections[-1]
 function aoc_library:char/to_ascii
 
 # add proper value to answer

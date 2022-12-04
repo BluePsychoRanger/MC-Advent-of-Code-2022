@@ -1,16 +1,12 @@
-forceload add -29999998 -98471
-setblock -29999998 64 -98471 stone
-setblock -29999998 65 -98471 acacia_sign
+# concatenates two strings (string1,string2)
+# input:   storage | string1, string2
+# output:  storage | string
 
-execute unless data storage bpr:aoc/library strings run tellraw @a [{"text":"[ERROR] ","color":"dark_red"},{"text":"No [strings] set","color":"red"},{"text":" ...aoc_library:functions/string/to_int (line 5)","color":"aqua"}]
-# 1: spaces
-execute if score concat_separator bpr_aoc matches 1 run data merge block -29999998 65 -98471 {Text1:'[{"nbt":"strings","storage":"aoc:bpr/library","interpret":true,"separator":" "}]'}
-# 2: line break
-execute if score concat_separator bpr_aoc matches 2 run data merge block -29999998 65 -98471 {Text1:'[{"nbt":"strings","storage":"aoc:bpr/library","interpret":true,"separator":"\\n"}]'}
-# 0: nothing (default)
-execute unless score concat_separator bpr_aoc matches 1..2 run data merge block -29999998 65 -98471 {Text1:'{"nbt":"strings","storage":"bpr:aoc/library","interpret":true,"separator":""}'}
 
-data modify storage bpr:aoc/library string set from block -29999998 65 -98471 Text1
+# error checking
+execute unless data storage bpr:aoc/library string1 run tellraw @a [{"text":"[ERROR] ","color":"dark_red"},{"text":"No [string1] set","color":"red"},{"text":" ...aoc_library:functions/string/concatenate","color":"aqua"}]
+execute unless data storage bpr:aoc/library string2 run tellraw @a [{"text":"[ERROR] ","color":"dark_red"},{"text":"No [string2] set","color":"red"},{"text":" ...aoc_library:functions/string/concatenate","color":"aqua"}]
 
-data remove storage bpr:aoc/library strings
-scoreboard players reset concat_separator
+# combine arrays
+data modify storage bpr:aoc/library string set from storage bpr:aoc/library string1
+data modify storage bpr:aoc/library string append from storage bpr:aoc/library string2[]

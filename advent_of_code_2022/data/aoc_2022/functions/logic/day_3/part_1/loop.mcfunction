@@ -8,10 +8,10 @@ data modify storage bpr:aoc/library string set from storage bpr:aoc next_string
 function aoc_library:string/split
 
 # find matching char
-function aoc_library:string/match
+function aoc_library:string/intersection
 
 # convert char to ascii value
-data modify storage bpr:aoc/library char set from storage bpr:aoc/library matches[-1]
+data modify storage bpr:aoc/library char set from storage bpr:aoc/library intersections[-1]
 function aoc_library:char/to_ascii
 
 # add proper value to answer

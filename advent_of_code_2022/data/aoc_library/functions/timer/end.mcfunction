@@ -1,3 +1,8 @@
+# ends the real-time counter and prints the runtime
+# input:  none
+# output: none
+
+
 # get total runtime
 execute store result score timer bpr_aoc run worldborder get
 scoreboard players operation runtime bpr_aoc -= timer bpr_aoc
@@ -22,8 +27,3 @@ data modify storage bpr:aoc/library time set from block -29999998 65 -98471 Text
 # revert worldborder
 worldborder center 0 0
 worldborder set 6000000
-
-# clean up
-scoreboard players reset timer bpr_aoc
-scoreboard players reset runtime_s bpr_aoc
-scoreboard players reset runtime_ms bpr_aoc
