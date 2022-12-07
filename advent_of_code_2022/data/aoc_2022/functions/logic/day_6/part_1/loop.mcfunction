@@ -4,7 +4,7 @@ function aoc_library:io/next_char
 data modify storage bpr:aoc buffer append from storage bpr:aoc next_char
 
 data modify storage bpr:aoc/library string set from storage bpr:aoc buffer
-function aoc_library:string/duplicates
+function aoc_library:string/find_duplicates
 
 scoreboard players add answer bpr_aoc_answers 1
 execute unless score duplicates bpr_aoc matches 0 run data remove storage bpr:aoc buffer[0]
