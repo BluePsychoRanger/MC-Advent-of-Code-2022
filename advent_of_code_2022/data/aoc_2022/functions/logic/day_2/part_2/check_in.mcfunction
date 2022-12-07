@@ -1,4 +1,4 @@
-data modify storage bpr:aoc/library string1 set from storage bpr:aoc Input[-1][2]
+data modify storage bpr:aoc/library string1 set from storage bpr:aoc next_string[2]
 
 data modify storage bpr:aoc/library string2 set value 'X'
 function aoc_library:string/equals

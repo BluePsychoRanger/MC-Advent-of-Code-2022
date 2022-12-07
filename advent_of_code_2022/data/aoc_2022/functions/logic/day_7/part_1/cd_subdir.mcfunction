@@ -1,2 +1,4 @@
+execute store result storage bpr:aoc current_count int 1 run scoreboard players get current_count bpr_aoc
 data modify storage bpr:aoc stack_cnt append from storage bpr:aoc current_count
-data modify storage bpr:aoc current_count set value [0]
+scoreboard players set current_count bpr_aoc 0
+data remove storage bpr:aoc current_count

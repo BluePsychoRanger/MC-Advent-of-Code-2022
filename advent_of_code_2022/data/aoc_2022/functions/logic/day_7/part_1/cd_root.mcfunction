@@ -1,11 +1,8 @@
 # check if current count is no more than 100000
-data modify storage bpr:aoc/library big_int1 set from storage bpr:aoc current_count
-data modify storage bpr:aoc/library big_int2 set value [1,0,0,0,0,0]
-function aoc_library:big_int/compare
-execute unless score big_int_gt bpr_aoc matches 1 run function aoc_2022:logic/day_7/part_1/add_total
+execute if score current_count bpr_aoc matches ..100000 run scoreboard players operation answer bpr_aoc_answers += current_count bpr_aoc
 
-# add to root count and change dir
-data modify storage bpr:aoc/library big_int2 set from storage bpr:aoc stack_cnt[-1]
-function aoc_library:big_int/add
-data modify storage bpr:aoc current_count set from storage bpr:aoc/library big_int
+# add to root count
+execute store result score add bpr_aoc run data get storage bpr:aoc stack_cnt[-1]
+scoreboard players operation current_count bpr_aoc += add bpr_aoc
+# change dir
 data remove storage bpr:aoc stack_cnt[-1]

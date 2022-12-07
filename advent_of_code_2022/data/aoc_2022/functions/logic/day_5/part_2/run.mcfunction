@@ -3,7 +3,6 @@ scoreboard players set column bpr_aoc 1
 scoreboard players set row bpr_aoc 1
 data modify storage bpr:aoc boxes set value [[],[],[],[],[],[],[],[],[],[]]
 
-function aoc_library:io/reverse
 function aoc_2022:logic/day_5/part_2/parse_init_row
 function aoc_library:io/next_string
 function aoc_library:io/next_string
