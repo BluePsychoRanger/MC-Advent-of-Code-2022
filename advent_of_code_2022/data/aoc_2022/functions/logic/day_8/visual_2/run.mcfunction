@@ -17,4 +17,4 @@ gamemode spectator @a
 
 data modify storage aoc:calc stored set from storage aoc:calc Input
 
-execute positioned 0 0 0 run schedule function aoc_2022:logic/day_8/visualization/build/loop 30t
+execute positioned 0 0 0 run schedule function aoc_2022:logic/day_8/visual_2/build/loop 30t

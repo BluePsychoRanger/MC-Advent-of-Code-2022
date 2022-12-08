@@ -7,4 +7,4 @@ data merge storage aoc:calc {Input:[['2','0','2','2','1','0','0','1','0','3','1'
 execute store result score input_length aoc_calc run data get storage aoc:calc Input
 
 function aoc_library:timer/start
-function aoc_2022:logic/day_8/visualization/run
+function aoc_2022:logic/day_8/visual_2/run
