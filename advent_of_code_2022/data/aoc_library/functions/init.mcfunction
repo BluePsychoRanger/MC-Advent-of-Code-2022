@@ -9,3 +9,6 @@ scoreboard players set 100 aoc_const 100
 scoreboard players set -1 aoc_const -1
 scoreboard players set 2 aoc_const 2
 scoreboard players set 1000 aoc_const 1000
+
+#declare storage aoc:library
+#declare storage aoc:calc
