@@ -37,7 +37,7 @@ def write_functions(cmd, day):
     if os.path.exists(f"{DIR}/logic/day_{day}/visual_1"):
         os.makedirs(os.path.dirname(f"{DIR}/visual/day_{day}/part_1.mcfunction"), exist_ok=True)
         with open(f"{DIR}/visual/day_{day}/part_1.mcfunction", "w") as file:
-            file.write(f"scoreboard players reset * aoc_calc\nscoreboard players reset * aoc_answer\nscoreboard players set day aoc_answer {day}\nscoreboard players set part aoc_answer 2\n\n{cmd}\nexecute store result score input_length aoc_calc run data get storage aoc:calc Input\n\nfunction aoc_library:timer/start\nfunction aoc_2022:logic/day_{day}/visual_1/run\n")
+            file.write(f"scoreboard players reset * aoc_calc\nscoreboard players reset * aoc_answer\nscoreboard players set day aoc_answer {day}\nscoreboard players set part aoc_answer 1\n\n{cmd}\nexecute store result score input_length aoc_calc run data get storage aoc:calc Input\n\nfunction aoc_library:timer/start\nfunction aoc_2022:logic/day_{day}/visual_1/run\n")
 
     if os.path.exists(f"{DIR}/logic/day_{day}/visual_2"):
         os.makedirs(os.path.dirname(f"{DIR}/visual/day_{day}/part_2.mcfunction"), exist_ok=True)
