@@ -1,6 +1,6 @@
-scoreboard players operation max_3 bpr_aoc > count bpr_aoc
-execute if score max_3 bpr_aoc > max_2 bpr_aoc run scoreboard players operation max_3 bpr_aoc >< max_2 bpr_aoc
-execute if score max_2 bpr_aoc > max_1 bpr_aoc run scoreboard players operation max_2 bpr_aoc >< max_1 bpr_aoc
+scoreboard players operation max_3 aoc_calc > count aoc_calc
+execute if score max_3 aoc_calc > max_2 aoc_calc run scoreboard players operation max_3 aoc_calc >< max_2 aoc_calc
+execute if score max_2 aoc_calc > max_1 aoc_calc run scoreboard players operation max_2 aoc_calc >< max_1 aoc_calc
 
-scoreboard players set num bpr_aoc 0
-scoreboard players set count bpr_aoc 0
+scoreboard players set num aoc_calc 0
+scoreboard players set count aoc_calc 0

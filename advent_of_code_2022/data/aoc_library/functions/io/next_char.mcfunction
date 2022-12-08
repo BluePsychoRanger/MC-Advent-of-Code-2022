@@ -4,8 +4,8 @@
 #         score   | next_char_valid
 
 
-data remove storage bpr:aoc next_char
-execute store result score next_char_valid bpr_aoc run data modify storage bpr:aoc next_char set from storage bpr:aoc next_string[0]
+data remove storage aoc:calc next_char
+execute store result score next_char_valid aoc_calc run data modify storage aoc:calc next_char set from storage aoc:calc next_string[0]
 
-scoreboard players remove next_string_length bpr_aoc 1
-execute if score next_string_length bpr_aoc matches 0.. run data remove storage bpr:aoc next_string[0]
+scoreboard players remove next_string_length aoc_calc 1
+execute if score next_string_length aoc_calc matches 0.. run data remove storage aoc:calc next_string[0]

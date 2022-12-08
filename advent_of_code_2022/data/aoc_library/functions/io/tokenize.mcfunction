@@ -4,9 +4,9 @@
 
 
 # tokenize io string
-data modify storage bpr:aoc/library string set from storage bpr:aoc next_string
+data modify storage aoc:library string set from storage aoc:calc next_string
 function aoc_library:string/tokenize
 
 # replace io string with tokenized list of strings
-data modify storage bpr:aoc next_string set from storage bpr:aoc/library strings
-execute store result score next_string_length bpr_aoc run data get storage bpr:aoc next_string
+data modify storage aoc:calc next_string set from storage aoc:library strings
+execute store result score next_string_length aoc_calc run data get storage aoc:calc next_string

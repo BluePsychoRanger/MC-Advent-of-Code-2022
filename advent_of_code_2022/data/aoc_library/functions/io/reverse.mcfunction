@@ -1,3 +1,3 @@
-data modify storage bpr:aoc/library list set from storage bpr:aoc Input
+data modify storage aoc:library list set from storage aoc:calc Input
 function aoc_library:list/reverse
-data modify storage bpr:aoc Input set from storage bpr:aoc/library list
+data modify storage aoc:calc Input set from storage aoc:library list

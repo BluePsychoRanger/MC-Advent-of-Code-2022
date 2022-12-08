@@ -6,4 +6,4 @@
 # convert to joined string
 function aoc_library:big_int/as_string
 # send to chat
-tellraw @a {"nbt":"big_int_string","storage":"bpr:aoc/library","interpret":true}
+tellraw @a {"nbt":"big_int_string","storage":"aoc:library","interpret":true}

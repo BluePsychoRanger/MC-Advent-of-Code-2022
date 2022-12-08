@@ -3,5 +3,5 @@
 # ouput:  score | num
 
 
-data modify storage bpr:aoc/library char set from storage bpr:aoc next_char
+data modify storage aoc:library char set from storage aoc:calc next_char
 function aoc_library:char/to_int

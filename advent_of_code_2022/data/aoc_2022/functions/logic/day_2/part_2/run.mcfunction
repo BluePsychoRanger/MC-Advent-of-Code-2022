@@ -1,3 +1,3 @@
-scoreboard players set answer bpr_aoc_answers 0
+scoreboard players set answer aoc_answer 0
 function aoc_2022:logic/day_2/part_2/loop
 function aoc_library:io/print_answer

@@ -3,5 +3,5 @@
 # ouput:  score | num
 
 
-data modify storage bpr:aoc/library string set from storage bpr:aoc next_token
+data modify storage aoc:library string set from storage aoc:calc next_token
 function aoc_library:string/to_int
