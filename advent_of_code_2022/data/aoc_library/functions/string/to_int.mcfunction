@@ -16,6 +16,7 @@ execute if score i_string_to_int aoc_calc matches 0 run scoreboard players set n
 execute if score i_string_to_int aoc_calc matches 0 run scoreboard players set num_invalid aoc_calc 1
 
 # check if it's negative
+scoreboard players set neg aoc_calc 0
 execute if score i_string_to_int aoc_calc matches 2.. run function aoc_library:string/helper_functions/to_int_neg_check
 
 # get int
