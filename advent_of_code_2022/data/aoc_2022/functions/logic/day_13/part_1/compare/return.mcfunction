@@ -1,0 +1,5 @@
+data modify storage aoc:calc packet2 set from storage aoc:calc stack[-1]
+data remove storage aoc:calc stack[-1]
+data modify storage aoc:calc packet1 set from storage aoc:calc stack[-1]
+data remove storage aoc:calc stack[-1]
+tellraw @a ["return"]
